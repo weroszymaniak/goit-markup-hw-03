@@ -7,6 +7,7 @@
     --main-white-color: #ffffff;
     --background-color: #2f303a;
     --button-color: #f5f4fa;
+    --border-color: #ececec;
 }
 
 body {
@@ -14,6 +15,10 @@ body {
     font-size: 14px;
     color: var(--main-font-color);
     text-decoration: none;
+}
+
+.container {
+    width: 1200px;
 }
 
 .logo {
@@ -24,19 +29,64 @@ body {
     line-height: 1.19;
     letter-spacing: 0.03em;
     text-decoration: none;
+    width: 145px;
+    height: 31px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    margin-right: 93px;
 }
 
 .logo-black {
     color: var(--logo-text-color-black);
 }
+.page-header-background {
+    width: 1600px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    background-color: var(--main-white-color);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--border-color);
+}
 
-.menu-nav .menu-nav-link {
+.nav-section {
+    display: inline-flex;
+    margin-left: 93px;
+    margin-right: 371px;
+    width: 254px;
+}
+.menu-nav {
+    display: flex;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
     color: var(--main-font-color);
+    width: 254px;
+    margin-right: 371px;
+    margin-top: 32px;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.menu-nav-link {
+    display: flex;
+    width: 51px;
+    margin-left: 46px;
+}
+
+/* li {
+    display: flex;
+    align-items: center;
+} */
+
 .menu-nav-link:hover {
     color: var(--logo-text-color-blue);
 }
@@ -44,6 +94,8 @@ body {
 .menu-nav-link {
     color: var(--logo-text-color-black);
     text-decoration: none;
+    margin-left: 46px;
+    width: 57px;
 }
 
 .menu-nav-link:focus {
@@ -56,6 +108,8 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+    display: inline-flex;
+    justify-content: space-between;
 }
 
 .contact-header:hover {
@@ -66,11 +120,32 @@ body {
     color: var(--logo-text-color-blue);
 }
 
+.mail {
+    width: 135px;
+    margin-top: 32px;
+    margin-bottom: 31px;
+    display: inline;
+}
+
+.tel {
+    width: 110px;
+    margin-left: 50px;
+    margin-top: 33px;
+    margin-bottom: 31px;
+}
 .contact-footer {
     line-height: 1, 71;
     letter-spacing: 0.03em;
     color: var(--contact-color-footer);
     font-style: normal;
+}
+
+.hero {
+    width: 1600px;
+    height: 600px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 200px;
 }
 
 .hero-title {
@@ -82,6 +157,14 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     background: var(--background-color);
+    width: 696px;
+    top: 280px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 200px;
+    padding-bottom: 30px;
 }
 
 .hero-button {
@@ -90,17 +173,27 @@ body {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    display: flex;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
     background: var(--logo-text-color-blue);
     border: none;
     cursor: pointer;
+    box-sizing: content-box;
+    margin-right: 500px;
+    margin-left: 500px;
+    margin-top: 0px;
+    width: 200px;
+    height: 50px;
+    padding-top: 10px;
+    padding-right: 41px;
+    padding-bottom: 10px;
+    padding-left: 42px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 
 .hero {
     background-color: var(--background-color);
+    width: 1600px;
 }
 
 .project-header {
@@ -151,17 +244,50 @@ body {
     background-color: var(--background-color);
 }
 
+.advantages {
+    display: flex;
+    justify-content: space-between;
+    width: 1600px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.advantages-item {
+    align-self: flex-start;
+    gap: ;
+}
+.advantages-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%;
+    width: 1170px;
+    margin-right: 94px;
+}
+
 .advantages-title {
     font-weight: 700;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    justify-items: center;
 }
 
 .advantages-description {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--contact-color);
+    margin: 0px;
+}
+
+.job {
+    width: 1600px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 94px;
+}
+
+h2 {
+    display: block;
 }
 
 .job-header {
@@ -170,14 +296,31 @@ body {
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+}
+.job-item {
+    width: 370px;
+    display: block;
 }
 
+.team {
+    width: 1600px;
+    background-color: var(--button-color);
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 94px;
+}
 .team-header {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
 }
 
 .team-name {
@@ -196,14 +339,20 @@ body {
     color: var(--contact-color);
 }
 
-.list {
+.job-list {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0px;
+    margin: 0px;
 }
 
-.menu {
-    position: absolute;
-    width: 1600px;
-    height: 80px;
-    left: 0px;
-    top: 0px;
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0px;
+    margin: 0px;
 }
