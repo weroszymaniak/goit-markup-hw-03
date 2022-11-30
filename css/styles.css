@@ -8,6 +8,9 @@
     --background-color: #2f303a;
     --button-color: #f5f4fa;
     --border-color: #ececec;
+    --box-shadow-color: rgba(0, 0, 0, 0.12);
+    --box-shadow-color2: rgba(0, 0, 0, 0.14);
+    --box-shadow-color3: rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -33,12 +36,14 @@ body {
     height: 31px;
     margin-top: 25px;
     margin-bottom: 25px;
-    margin-left: 15px;
     margin-right: 93px;
 }
 
 .logo-black {
     color: var(--logo-text-color-black);
+}
+.logo-white {
+    color: var(--main-white-color);
 }
 .page-header-background {
     width: 1600px;
@@ -133,11 +138,21 @@ body {
     margin-top: 33px;
     margin-bottom: 31px;
 }
-.contact-footer {
+.contact-footer-mail {
     line-height: 1, 71;
     letter-spacing: 0.03em;
     color: var(--contact-color-footer);
     font-style: normal;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+.contact-footer-tel {
+    line-height: 1, 71;
+    letter-spacing: 0.03em;
+    color: var(--contact-color-footer);
+    font-style: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .hero {
@@ -238,10 +253,17 @@ body {
     letter-spacing: 0.03em;
     color: var(--main-white-color);
     font-style: normal;
+    margin-bottom: 0;
+    margin-top: 20px;
 }
 
 .footer {
     background-color: var(--background-color);
+    width: 1600px;
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .advantages {
@@ -250,6 +272,8 @@ body {
     width: 1600px;
     padding-left: 200px;
     padding-right: 200px;
+    margin-bottom: 94px;
+    margin-top: 94px;
 }
 .advantages-item {
     align-self: flex-start;
@@ -261,7 +285,6 @@ body {
     justify-content: space-between;
     gap: 5%;
     width: 1170px;
-    margin-right: 94px;
 }
 
 .advantages-title {
@@ -311,6 +334,7 @@ h2 {
     padding-left: 200px;
     padding-right: 200px;
     padding-top: 94px;
+    padding-bottom: 94px;
 }
 .team-header {
     font-weight: 700;
@@ -323,6 +347,13 @@ h2 {
     margin-bottom: 50px;
 }
 
+.team-item {
+    width: 270px;
+    background-color: var(--main-white-color);
+    box-shadow: 0px 1px 3px --box-shadow-color, 0px 1px 1px --box-shadow-color2,
+        0px 2px 1px --box-shadow-color3;
+    border-radius: 0px 0px 4px 4px;
+}
 .team-name {
     font-weight: 500;
     font-size: 16px;
