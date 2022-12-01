@@ -11,6 +11,10 @@
     --box-shadow-color: rgba(0, 0, 0, 0.12);
     --box-shadow-color2: rgba(0, 0, 0, 0.14);
     --box-shadow-color3: rgba(0, 0, 0, 0.2);
+    --button-border: rgba(0, 0, 0, 0.15);
+    --button-shadow1: rgba(0, 0, 0, 0.1);
+    --button-shadow2: rgba(0, 0, 0, 0.08);
+    --item-border: #eeeeee;
 }
 
 body {
@@ -33,10 +37,6 @@ body {
     letter-spacing: 0.03em;
     text-decoration: none;
     width: 145px;
-    height: 31px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-right: 93px;
 }
 
 .logo-black {
@@ -47,8 +47,8 @@ body {
 }
 .page-header-background {
     width: 1600px;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding: 24px 200px 25px 200px;
+    border-bottom: 1px solid var(--border-color);
 }
 .page-header {
     display: flex;
@@ -56,15 +56,13 @@ body {
     justify-content: space-between;
     flex-wrap: nowrap;
     background-color: var(--main-white-color);
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: var(--border-color);
+    border-bottom-width: 1px solid var(--border-color);
 }
 
 .nav-section {
     display: inline-flex;
     margin-left: 93px;
-    margin-right: 371px;
+    margin-right: 364px;
     width: 254px;
 }
 .menu-nav {
@@ -75,32 +73,21 @@ body {
     text-decoration: none;
     color: var(--main-font-color);
     width: 254px;
-    margin-right: 371px;
-    margin-top: 32px;
     justify-content: space-between;
     align-items: center;
-}
-
-.menu-nav-link {
-    display: flex;
-    width: 51px;
-    margin-left: 46px;
-}
-
-/* li {
-    display: flex;
-    align-items: center;
-} */
-
-.menu-nav-link:hover {
-    color: var(--logo-text-color-blue);
+    list-style: none;
+    padding-left: 0px;
+    margin: 0;
 }
 
 .menu-nav-link {
     color: var(--logo-text-color-black);
     text-decoration: none;
-    margin-left: 46px;
-    width: 57px;
+    display: flex;
+}
+
+.menu-nav-link:hover {
+    color: var(--logo-text-color-blue);
 }
 
 .menu-nav-link:focus {
@@ -127,16 +114,12 @@ body {
 
 .mail {
     width: 135px;
-    margin-top: 32px;
-    margin-bottom: 31px;
     display: inline;
 }
 
 .tel {
     width: 110px;
     margin-left: 50px;
-    margin-top: 33px;
-    margin-bottom: 31px;
 }
 .contact-footer-mail {
     line-height: 1, 71;
@@ -155,12 +138,15 @@ body {
     margin-bottom: 0px;
 }
 
+.section {
+    width: 1600px;
+    padding: 94px 200px;
+}
+
 .hero {
     width: 1600px;
-    height: 600px;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 200px;
+    padding: 200px;
+    background-color: var(--background-color);
 }
 
 .hero-title {
@@ -173,13 +159,9 @@ body {
     text-transform: uppercase;
     background: var(--background-color);
     width: 696px;
-    top: 280px;
-    margin-right: auto;
     margin-left: auto;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-top: 200px;
-    padding-bottom: 30px;
+    margin-right: auto;
+    margin-bottom: 30px;
 }
 
 .hero-button {
@@ -190,39 +172,15 @@ body {
     line-height: 1.88;
     letter-spacing: 0.06em;
     background: var(--logo-text-color-blue);
-    border: none;
+    text-align: center;
     cursor: pointer;
-    box-sizing: content-box;
-    margin-right: 500px;
-    margin-left: 500px;
-    margin-top: 0px;
+    box-sizing: border-box;
+    margin: 0px 500px;
     width: 200px;
-    height: 50px;
     padding-top: 10px;
-    padding-right: 41px;
     padding-bottom: 10px;
-    padding-left: 42px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--button-border);
     border-radius: 4px;
-}
-
-.hero {
-    background-color: var(--background-color);
-    width: 1600px;
-}
-
-.project-header {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-}
-
-.project-category {
-    color: var(--contact-color);
-    font-size: 16px;
-    line-height: 1.875;
-    letter-spacing: 0.03em;
 }
 
 .filter-button {
@@ -235,12 +193,17 @@ body {
     letter-spacing: 0.03em;
     background-color: var(--button-color);
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    padding: 6px 22px;
 }
 
 .filter-button:hover {
     color: var(--main-white-color);
     background-color: var(--logo-text-color-blue);
+    box-shadow: 0px 3px 1px var(--button-shadow1),
+        0px 1px 2px var(--button-shadow2), 0px 2px 2px var(--box-shadow-color);
+    border-radius: 4px;
 }
 
 .filter-button:focus {
@@ -260,24 +223,19 @@ body {
 .footer {
     background-color: var(--background-color);
     width: 1600px;
-    padding-right: 200px;
-    padding-left: 200px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 200px;
 }
 
 .advantages {
-    display: flex;
-    justify-content: space-between;
     width: 1600px;
     padding-left: 200px;
     padding-right: 200px;
-    margin-bottom: 94px;
-    margin-top: 94px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 94px;
 }
 .advantages-item {
     align-self: flex-start;
-    gap: ;
 }
 .advantages-list {
     display: flex;
@@ -302,26 +260,14 @@ body {
     margin: 0px;
 }
 
-.job {
-    width: 1600px;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 94px;
-}
-
-h2 {
-    display: block;
-}
-
 .job-header {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 .job-item {
     width: 370px;
@@ -329,12 +275,7 @@ h2 {
 }
 
 .team {
-    width: 1600px;
     background-color: var(--button-color);
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-top: 94px;
-    padding-bottom: 94px;
 }
 .team-header {
     font-weight: 700;
@@ -342,17 +283,18 @@ h2 {
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .team-item {
     width: 270px;
     background-color: var(--main-white-color);
-    box-shadow: 0px 1px 3px --box-shadow-color, 0px 1px 1px --box-shadow-color2,
-        0px 2px 1px --box-shadow-color3;
+    box-shadow: 0px 1px 3px var(--box-shadow-color),
+        0px 1px 1px var(--box-shadow-color2),
+        0px 2px 1px var(--box-shadow-color3);
     border-radius: 0px 0px 4px 4px;
+    padding-bottom: 30px;
 }
 .team-name {
     font-weight: 500;
@@ -360,6 +302,8 @@ h2 {
     line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 .team-job {
@@ -368,6 +312,17 @@ h2 {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--contact-color);
+    margin-bottom: 0px;
+}
+
+.team-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 50px;
+    padding-left: 0px;
+    margin: 0px;
 }
 
 .job-list {
@@ -375,15 +330,65 @@ h2 {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    padding-top: 50px;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.filter-list {
+    list-style: none;
+    width: 572px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 0;
+    margin-left: 314px;
+    margin-right: 314px;
+    margin-top: 0px;
+    margin-bottom: 34px;
+}
+
+.projects-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     padding: 0px;
     margin: 0px;
 }
 
-.list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 0px;
+.project-item {
+    width: 370px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    background: var(--main-white-color);
+    border: 1px solid var(--item-border);
+}
+
+.project-header {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+
+.project-category {
+    color: var(--contact-color);
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.03em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+figure {
     margin: 0px;
+}
+
+.project-description {
+    padding-left: 24px;
+    padding-right: 24px;
 }
