@@ -48,8 +48,9 @@ body {
     color: var(--main-white-color);
 }
 .page-header-background {
-    padding: 24px 200px 25px 200px;
     border-bottom: 1px solid var(--border-color);
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .page-header {
     display: flex;
