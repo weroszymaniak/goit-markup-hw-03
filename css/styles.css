@@ -173,17 +173,13 @@ body {
     letter-spacing: 0.06em;
     background: var(--logo-text-color-blue);
     text-align: center;
-    display: inline;
+    display: block;
+    margin: auto;
     cursor: pointer;
-    box-sizing: border-box;
-    margin-left: 500px;
-    margin-right: 500px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 200px;
     box-shadow: 0px 4px 4px var(--button-border);
     border-radius: 4px;
     border-style: none;
+    padding: 10px 42px;
 }
 
 .filter-button {
@@ -241,6 +237,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0;
 }
 
 .advantages-title {
@@ -318,9 +315,9 @@ body {
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding-top: 50px;
-    padding-left: 0px;
-    margin: 0px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    padding-left: 0;
 }
 
 .job-list {
